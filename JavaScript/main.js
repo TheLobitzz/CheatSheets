@@ -192,6 +192,47 @@ function Conditionals(){
     }
     if (x === 10){ // === tests for value and datatype 
         console.log('test2: x is 10');
+    } else if (x > 10){
+        console.log('test2: x is greater than 10')
+    } else {
+        console.log('test2: x is less than 10');
+    }
+
+    const y = 4;
+    const z = 10;
+    if (y > 5 || z > 10){
+        console.log(true);
+    }
+
+    // Ternary Operator: ? (represents then), and : (represents else)
+    const x1 = 10;
+    const color = x > 10 ?  'red' : 'blue';
+    console.log(color);
+
+    // Switches
+    switch(color) {
+        case 'red':
+            console.log('color is red');
+            break;
+        case 'blue':
+            console.log('color is blue');
+            break;
+        default:
+            console.log('color is NOT red or blue');
+            break;
     }
 }
-Conditionals();
+
+function Functions(){
+    function addNums(num1 = 1, num2 = 1){ // you can set default values
+        console.log(num1 + num2);
+        return num1 + num2;
+    }
+    addNums(5,4);
+    addNums(); // should get NaN (not a number) if no default values
+    console.log(addNums(10,1));
+
+    // 
+}
+
+Functions();
