@@ -1,0 +1,135 @@
+<!--Tips
+
+1. ctrl + U for the source code
+2. F12 button for elements in Google Chrome
+3. type "lorem" and press tab for random words
+4. type "lorem10" and tab/enter for 10 words, etc.
+5. Semantic tags are tags known to both browser and developer
+-->
+<!DOCTYPE html> <!--doctype for HTML5. Must always be at the start.-->
+
+<html>
+    <head>
+        <title>HTML CHeat Sheet</title> <!--Shown as tab title-->
+    </head>
+    
+    <body>
+        <!-- Headings --> 
+        <h1>Heading One</h1>
+        <h2>Heading Two</h2>
+        <h3>Heading Three</h3>
+        <h4>Heading Four</h4>
+        <h5>Heading Five</h5>
+        <h6>Heading Six</h6>
+
+        <!-- Horizontal Rule -->
+        <hr>
+
+        <!-- Paragraph -->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero magni aut laborum commodi inventore corrupti eaque provident earum suscipit, eligendi harum sit accusantium ullam aspernatur odit quam, tempore illo et!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, incidunt.</p>
+
+        <!-- Strong (default is bold) and Em (italicize)-->
+        <p>Lorem ipsum <Strong>dolor sit amet</Strong> consectetur <em> adipisicing elit.</em> </p> <hr>
+     
+        <!-- Links --> <!-- Break -->
+        <a href="http://google.com">Google link</a><br>
+        <a href="http://google.com" target="_blank">Google link opening on new tab.</a>
+        <hr>
+        
+        <!-- Lists --> <!-- Unorderd Lists or bullet point (ul); Ordered Lists or numbered (ol)-->
+        <ul>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+        </ul>
+        <ol>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+        </ol><hr>
+
+        <!-- Tables -->
+        <table>
+            <thead> <!-- table headings -->
+                <tr> <!-- table row -->
+                    <th> Name </th> 
+                    <th> Email </th>
+                    <th> Age </th>
+                </tr> 
+            </thead>
+
+            <tbody> <!-- table body -->
+                <tr>
+                    <td> Paolo Joseph</td>
+                    <td> paolo.lobitana@obf.ateneo.edu</td>
+                    <td> 25 </td>
+                </tr>
+                <tr>
+                    <td> John Doe</td>
+                    <td> jdoe@something.com</td>
+                    <td> 35 </td>
+                </tr>
+            </tbody>
+        </table><br><hr>
+
+        <!-- Forms --> <!-- Div block level tag -->
+        <form action="exampleprocess.php" method="POST">
+            <div>
+                <label>First Name</label>
+                <input type="text" name="firstName" placeholder="write First Name here"> <!-- text type-->
+            </div><br>
+            <div>
+                <label>Last Name</label>
+                <input type="text" name="lastName">
+            </div><br>
+            <div>
+                <label>Email</label>
+                <input type="email" name="email"> <!-- email type -->
+            </div><br>
+            <div> 
+                <label>Message</label>
+                <textarea name="message"></textarea> <!-- textarea type, adjustable in browser-->
+            </div><br>
+            <div>
+                <label>Gender</label>
+                <select name="gender"> <!-- select type -->
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div><br>
+            <div>
+                <label>Age</label>
+                <input type="number" name="age" value="30"> <!-- number type-->
+            </div><br>
+            <div>
+                <label>Birthday</label>
+                <input type="date" name="birthday"> <!-- date type-->
+            </div><br>
+            <div>
+                <input type="submit" name="submit" value="Submit">
+            </div>
+
+        </form><hr>
+
+        <!-- Button -->
+        <button click="someJavaScriptFunction()">Click me</button>
+
+        <!-- Images -->
+        <a href="images/sample.jpg">
+            <img src="images/sample.jpg" alt="My Sample Image" width="200" height="50">
+        </a>
+
+        <!-- Quotations -->
+        <blockquote cite="http://traversymedia.com">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam assumenda illum porro natus inventore illo iste ut molestiae recusandae pariatur?
+        </blockquote>
+
+        <p> The <abbr title="World Wide Web">WWW</abbr> is awesome </p>
+
+        <p><cite>HTML crash course</cite> by Brad Traversy</p>
+
+        <div style="margin-top:500px"></div><br>
+    </body>
+</html>
