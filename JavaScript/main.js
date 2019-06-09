@@ -232,7 +232,85 @@ function Functions(){
     addNums(); // should get NaN (not a number) if no default values
     console.log(addNums(10,1));
 
-    // 
+    // arrow functions
+    const addNums1 = (num1 = 1, num2 = 1) => num1 + num2;
+    console.log(addNums1(18,18));
+    // useful in forEach functions
 }
 
-Functions();
+function ObjectOrientedProgramming(){
+    // object-oriented programmingm, pre-classes
+    // Constructor function
+    function Person(firstName, lastName, dateOfBirth){
+        // when you pass the parameters above, you wanna set them up as 'properties' of the object being created (or instantiated). This is done by the keyword 'this'.
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dateOfBirth = dateOfBirth;
+
+        // convert to Date object
+        this.dob = new Date(dateOfBirth);
+
+        /* this part not needed anymore because of prototype
+        // add methods, that are basically just function to this object called Person
+        // if you look at console, the functions below are also included in the object, together with the properties
+        this.getBirthYear = function() {
+            return this.dob.getFullYear();
+        }
+        this.getFullName = function() {
+            // backquote is a template literal
+            return `${this.firstName} ${this.lastName}`;
+        }
+        */
+    }
+
+    // prototypes is another object. so if you don't want to put the methods/functions (getBirthYear, getFullName, etc) inside the function, because you might not used them, what you do is put them in the prototype object, as seen below. This is outside of the function. THen you can get rid of the methods inside the function.
+    Person.prototype.getBirthYear = function() {
+        return this.dob.getFullYear();
+    }
+    Person.prototype.getFullName = function() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+
+    // Instantiate object
+    const person1 = new Person('John', 'Doe', '4-3-1980');
+    const person2 = new Person('Mary', 'Smith', '3-6-1970');
+    console.log(person1);
+    console.log(person2.firstName);
+    // doing stuff with date object
+    console.log(person2.dob.getFullYear());
+    // call getBirthYear method
+    console.log(person1.getBirthYear());
+    // call getFullName method
+    console.log(person1.getFullName());
+
+}
+
+function Classes() {
+    // class. Does the same thing as the function above, just prettier.
+    class Person{
+        // a method inside a class called constructor. just like prototype for functions
+        constructor(firstName, lastName, dob) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.dob = new Date(dob);
+        }
+        getBirthYear() {
+            return this.dob.getFullYear();
+        }
+
+        getFullName() {
+            return `${this.firstName} ${this.lastName}`;
+        }
+    }
+    // object instantiated
+    const person1 = new Person('John', 'Doe', '4-3-1980');
+    const person2 = new Person('Mary', 'Smith', '3-6-1970');
+    console.log(person2.getFullName());
+    console.log(person1);
+}
+
+function DOMs{
+    // continue over to main2.js
+}
+
+DOMs();
